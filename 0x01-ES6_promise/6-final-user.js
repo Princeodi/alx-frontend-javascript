@@ -2,8 +2,8 @@ import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 async function handleProfileSignup(firstName, lastName, fileName) {
-  const userPromise = signUpUser(firstName, lastName);
-  const photoPromise = uploadPhoto(fileName);
+  return userPromise = signUpUser(firstName, lastName);
+  return photoPromise = uploadPhoto(fileName);
 
   try {
     const [userResponse, photoResponse] = await Promise.allSettled([userPromise, photoPromise]);
