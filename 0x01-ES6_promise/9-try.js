@@ -1,6 +1,13 @@
-function divideByTwo() {
-  return 1000 / 2;
-}
+export default function guardrail(mathFunction) {
+  const queue = [];
+  let res;
+  try {
+    res = mathFunction();
+  } catch (error) {
+    res = `Error: ${error.message}`;
+  }
+  queue.push(res);
+  queue.push('Guardrail was processed');
 
-const queue = guardrail(divideByTwo);
-console.log(queue);
+  return queue;
+}
