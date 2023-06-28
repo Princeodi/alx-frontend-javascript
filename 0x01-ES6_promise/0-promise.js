@@ -1,8 +1,14 @@
-getResponseFromAPI()
-  .then(response => {
-    console.log(response.data); // Accessing the response data
-    console.log(response.status); // Accessing the response status
-  })
-  .catch(error => {
-    console.error("Error occurred:", error);
+export default function getResponseFromAPI() {
+  return new Promise((resolve, reject) => {
+  
+    setTimeout(() => {
+     
+      const response = {
+        data: "Sample response data",
+        status: 200
+      };
+
+      resolve(response); 
+    }, 2000);
   });
+}
