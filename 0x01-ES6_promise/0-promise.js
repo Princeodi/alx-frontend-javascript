@@ -1,4 +1,3 @@
-export default getFullResponseFromAPI;
 function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
 <<<<<<< HEAD
@@ -26,3 +25,4 @@ function getFullResponseFromAPI(success) {
 >>>>>>> f5ed258ea80fbc5438fd4e745ba81f6bdfc849e2
   });
 }
+export default getFullResponseFromAPI;
