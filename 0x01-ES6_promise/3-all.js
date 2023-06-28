@@ -6,11 +6,11 @@ function handleProfileSignup() {
       const { body: photoBody } = photoResponse;
       const { body: userBody } = userResponse;
       const { firstName, lastName } = userBody;
-      
+
       console.log(`Body: ${photoBody} ${firstName} ${lastName}`);
     })
-    .catch(error => {
-      console.error("Signup system offline:", error);
+    .catch((error) => {
+      console.error('Signup system offline:', error);
     });
 }
 
