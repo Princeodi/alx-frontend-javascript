@@ -1,10 +1,6 @@
 import ClassRoom from './0-classroom';
 
-function initializeRooms() {
-  const _maxStudentsSize = [19, 20, 34];
-  const rooms = _maxStudentsSize.map((_maxStudentsSize) => new ClassRoom(_maxStudentsSize));
+export default function initializeRooms() {
+  const rooms = [new ClassRoom(19), new ClassRoom(20), new ClassRoom(34)];
   return rooms;
 }
-
-const rooms = initializeRooms();
-console.log(rooms);
