@@ -1,11 +1,12 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
-     if (typeof name !== 'string' || typeof length !== 'number' || !Array.isArray(students)) {
-      throw new Error('Invalid input type');
-    }
     this._name = typeof name === 'string' ? name : '';
     this._length = typeof length === 'number' ? length : 0;
     this._students = Array.isArray(students) ? students : [];
+    
+    if (typeof name !== 'string' || typeof length !== 'number' || !Array.isArray(students)) {
+      throw new Error('Invalid input type');
+    }
   }
 
   get name() {
